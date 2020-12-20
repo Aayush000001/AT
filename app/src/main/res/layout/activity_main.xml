@@ -36,5 +36,28 @@
         android:layout_marginTop="56dp"
         android:layout_marginEnd="20dp"
         android:gravity="center_horizontal"
-        android:text="name will appear here when entered" />
+        android:text="name will appear here when entered"
+        android:textSize="24sp"
+        android:textStyle="bold|italic" />
+
+    <EditText
+        android:id="@+id/etAct2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="This is a test shown in activity2"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btnSubmitAct2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/submit" />
 </LinearLayout>

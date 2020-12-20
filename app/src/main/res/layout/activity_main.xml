@@ -60,4 +60,23 @@
         android:layout_marginTop="14dp"
         android:layout_marginEnd="20dp"
         android:text="@string/submit" />
+
+    <Button
+        android:id="@+id/btnAct2B"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="20dp"
+        android:text="Activity2" />
+
+    <TextView
+        android:id="@+id/tvResultAct2B"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center_horizontal"
+        android:text="data from act2 will be shown here" />
 </LinearLayout>

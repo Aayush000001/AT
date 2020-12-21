@@ -14,7 +14,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     EditText etName, etAct2;
-    Button btnSubmit, btnSubmitAct2, btnAct2B;
+    Button btnSubmit, btnSubmitAct2, btnAct2B, btnActFrag;
     TextView tvResult, tvResultAct2B;
 
     final int ACTIVITY2 = 79;
@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         etAct2 = findViewById(R.id.etAct2);
         tvResultAct2B = findViewById(R.id.tvResultAct2B);
         btnAct2B = findViewById(R.id.btnAct2B);
+        btnActFrag = findViewById(R.id.btnActFrag);
 
         // TvResult view gone
         tvResult.setVisibility(View.GONE);
@@ -104,6 +105,14 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, com.example.at.Activity2.class);
                 startActivityForResult(intent, ACTIVITY2);
 
+            }
+        });
+
+        btnActFrag.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, com.example.at.Frag.class);
+                startActivity(intent);
             }
         });
 

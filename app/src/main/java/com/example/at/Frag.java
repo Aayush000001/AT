@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class Frag extends AppCompatActivity implements ListFrag.ItemSelected {
     TextView tvDescription;
 
-    ArrayList<String> descriptions;
+    String [] descriptions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,24 +21,13 @@ public class Frag extends AppCompatActivity implements ListFrag.ItemSelected {
 
         // creating array list for item description.
 
-        descriptions = new ArrayList<>();
-        descriptions.add("This is description for item 1");
-        descriptions.add("This is description for item 2");
-        descriptions.add("This is description for item 3");
-        descriptions.add("This is description for item 4");
-        descriptions.add("This is description for item 5");
-        descriptions.add("This is description for item 6");
-        descriptions.add("This is description for item 7");
-        descriptions.add("This is description for item 8");
-        descriptions.add("This is description for item 9");
-        descriptions.add("This is description for item 10");
-        descriptions.add("This is description for item 11");
+        descriptions = getResources().getStringArray(R.array.descriptions);
 
     }
 
     @Override
     public Void onItemSelected(int index) {
-        tvDescription.setText(descriptions.get(index));
+        tvDescription.setText(descriptions[index]);
         return null;
     }
 }

@@ -16,27 +16,16 @@ public class ListFrag extends ListFragment {
 
     ItemSelected activity;
 
-     public interface ItemSelected
+     public interface ItemSelected //interface is used to setup connection between Frag.java, ListFrag.java, DetailsFrag.java
     {
-        Void onItemSelected(int index);
+        Void onItemSelected(int index);  // method created, void does not return any value.
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        ArrayList<String> data = new ArrayList<>();
-        data.add("item 1");
-        data.add("item 2");
-        data.add("item 3");
-        data.add("item 4");
-        data.add("item 5");
-        data.add("item 6");
-        data.add("item 7");
-        data.add("item 8");
-        data.add("item 9");
-        data.add("item 10");
-        data.add("item 11");
+        String [] data = getResources().getStringArray(R.array.pieces);
 
         setListAdapter(new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, data));
         activity.onItemSelected(0);  //clicks the first item.
@@ -45,14 +34,14 @@ public class ListFrag extends ListFragment {
 
     @Override
     public void onListItemClick(@NonNull ListView l, @NonNull View v, int position, long id) {
-         activity.onItemSelected(position);
+         activity.onItemSelected(position); // returns the int value of the list item clicked.
     }
 
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
 
-        activity = (ItemSelected) context;
+        activity = (ItemSelected) context;   // we need to cast this method
     }
 
 }

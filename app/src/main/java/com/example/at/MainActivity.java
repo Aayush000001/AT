@@ -108,6 +108,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        /**
+         * this button starts the listFrag and details frag @btnActFrag.
+         */
+
         btnActFrag.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
